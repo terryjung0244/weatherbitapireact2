@@ -13,6 +13,7 @@ export default function weatherReducer(state = initState, action) {
     switch (action.type) {
       case WEATHER_API_CALL_ACTION:
         console.log("checking reducer")
+        console.log(action.payload)
         break;
       default:      
       return state;

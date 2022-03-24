@@ -9,8 +9,9 @@ const WeatherComp = () => {
 
   const dispatch = useDispatch();
 
-  const onClickCity = () => {
-    dispatch(weatherReducerWeatherApiCallAction());
+  const onClickCity = (city) => {
+    console.log(city)
+    dispatch(weatherReducerWeatherApiCallAction(city));
   }
 
   return (
@@ -18,7 +19,7 @@ const WeatherComp = () => {
       <div>
         {cityList.map((city, index) => {
           return (
-            <div onClick={onClickCity} key={city.cityName}>
+            <div onClick={() => onClickCity(city)} key={city.cityName}>
               {city.cityName}
             </div>
           )
