@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { cityList } from '../../cityList';
+import { weatherReducerWeatherApiCallAction } from '../reducers/weatherAction';
 
 const WeatherComp = () => {
 
@@ -9,7 +10,7 @@ const WeatherComp = () => {
   const dispatch = useDispatch();
 
   const onClickCity = () => {
-    console.log("city")
+    dispatch(weatherReducerWeatherApiCallAction());
   }
 
   return (
