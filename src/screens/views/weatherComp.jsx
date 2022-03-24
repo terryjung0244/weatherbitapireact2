@@ -8,12 +8,16 @@ const WeatherComp = () => {
 
   const dispatch = useDispatch();
 
+  const onClickCity = () => {
+    console.log("city")
+  }
+
   return (
     <div>
       <div>
         {cityList.map((city, index) => {
           return (
-            <div key={city.cityName}>
+            <div onClick={onClickCity} key={city.cityName}>
               {city.cityName}
             </div>
           )
