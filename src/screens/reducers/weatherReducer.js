@@ -4,6 +4,12 @@ import { WEATHER_ACTION_CONST } from "../../services/const/actionConst";
 const {WEATHER_API_CALL_ACTION} = WEATHER_ACTION_CONST;
 
 const initState = {
+  weatherApiResult: {
+    processing: false, 
+    processed: false,
+    message: '',
+    result: null
+  }
 
 }
 
@@ -12,8 +18,7 @@ export default function weatherReducer(state = initState, action) {
     
     switch (action.type) {
       case WEATHER_API_CALL_ACTION:
-        console.log("checking reducer")
-        console.log(action.payload)
+        
         break;
       default:      
       return state;
